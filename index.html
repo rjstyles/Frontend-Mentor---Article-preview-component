@@ -2,249 +2,342 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 
-  <title>Frontend Mentor | Article preview component</title>
-  <script>
-    function openSharePopup() {
-      let popup = document.getElementById("sharePopup");
-      let shareButton = document.getElementById("share-button");
-      let arrow = document.getElementById("arrow");
-      arrow.classList.toggle("arrow-down");
-      shareButton.classList.toggle("share-dark");
-      popup.classList.toggle("share-popup");
-    }
-  </script>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
+	<title>Frontend Mentor | Article preview component</title>
+	<script>
+		function openSharePopup() {
+			let popup = document.getElementById("sharePopup");
+			let shareButton = document.getElementById("share-button");
+			let arrow = document.getElementById("arrow");
+			let detailContact = document.getElementById("detail-contact");
+			arrow.classList.toggle("arrow-down");
+			shareButton.classList.toggle("share-dark");
+			popup.classList.toggle("share-popup");
+			detailContact.classList.toggle("detail-contact-dark")
+		}
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
+	</script>
+	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+	<style>
+		.attribution {
+			font-size: 11px;
+			text-align: center;
+		}
 
-    html,
-    body {
-      height: 100%;
-    }
+		.attribution a {
+			color: hsl(228, 45%, 44%);
+		}
 
-    body {
-      font-family: 'Manrope', sans-serif;
-      background-color: hsl(210, 46%, 95%);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-    }
+		html,
+		body {
+			height: 100%;
+		}
 
-    .article-preview {
-      width: 855.88px;
-      height: 350px;
-      background-color: white;
-      border-radius: 15px;
-      display: flex;
-      box-shadow: 15px 15px 15px hsl(210, 46%, 95%);
-    }
+		.container {
+			width: 853.4px;
+			height: 300px;
+		}
 
-    .img {
-      border-radius: 15px 0px 0px 15px;
-      overflow: hidden;
-      width: 100%;
-    }
+		body {
+			font-family: 'Manrope', sans-serif;
+			background-color: hsl(210, 46%, 95%);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
 
-    .detail {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      padding: 40px;
-    }
+		.article-preview {
 
-    .detail-text {
-      display: flex;
-      flex-direction: column;
-    }
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			border-radius: 15px;
+			display: flex;
+			box-shadow: 15px 15px 15px hsl(210, 46%, 95%);
+		}
 
-    .text-header {
-      color: hsl(217, 19%, 35%);
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
+		.img {
+			border-radius: 15px 0px 0px 15px;
+			overflow: hidden;
+		}
 
-    .text {
-      color: hsl(214, 17%, 51%);
-      font-size: 13px;
-      margin-bottom: 20px;
-    }
+		.detail {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			padding: 40px;
+		}
 
-    .detail-contact {
-      font-weight: 700;
-      color: hsl(217, 19%, 35%);
-      font-size: 13px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+		.detail-text {
+			display: flex;
+			flex-direction: column;
+		}
 
-    .contact {
-      display: flex;
-      align-items: center;
-    }
+		.text-header {
+			color: hsl(217, 19%, 35%);
+			font-size: 24px;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
 
-    .contact-name {
-      height: 100%;
-      display: flex;
-      padding-left: 20px;
-      justify-content: space-around;
-      align-items: start;
-      flex-direction: column;
-    }
+		.text {
+			color: hsl(214, 17%, 51%);
+			font-size: 13px;
+			margin-bottom: 20px;
+		}
 
-    .contact-img {
-      border-radius: 50%;
-    }
+		.detail-contact {
+			font-weight: 700;
+			color: hsl(217, 19%, 35%);
+			font-size: 13px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-    .contact-date {
-      margin-top: 5px;
-      color: hsl(212, 23%, 69%);
-      font-weight: 300;
-    }
+		.detail-contact-dark {
+			font-weight: 700;
+			color: hsl(217, 19%, 35%);
+			font-size: 13px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-    .share {
-      height: 15px;
-      background-color: hsl(210, 46%, 95%);
-      padding: 10px;
-      border-radius: 50%;
-      position: relative;
-    }
+		.contact {
+			display: flex;
+			align-items: center;
+		}
 
-    .share-dark {
-      height: 15px;
-      background-color: hsl(214, 17%, 51%);
-      padding: 10px;
-      border-radius: 50%;
-      position: relative;
-    }
+		.contact-name {
+			height: 100%;
+			display: flex;
+			padding-left: 20px;
+			justify-content: space-around;
+			align-items: start;
+			flex-direction: column;
+		}
 
-    .share-dark svg path {
-      fill: hsl(210, 46%, 95%);
-    }
+		.contact-img {
+			border-radius: 50%;
+		}
 
-    .share-popup-hidden {
-      display: none;
-    }
+		.contact-date {
+			color: hsl(212, 23%, 69%);
+			font-weight: 300;
+		}
 
-    .share-popup {
-      color: hsl(212, 23%, 69%);
-      border-radius: 10px;
-      position: absolute;
-      bottom: 50px;
-      left: -100px;
-      display: flex;
-      padding: 0px 30px;
-      background-color: hsl(217, 19%, 35%);
-    }
+		.share {
+			height: 15px;
+			background-color: hsl(210, 46%, 95%);
+			padding: 10px;
+			border-radius: 50%;
+			position: relative;
+		}
 
-    .share-items {
-      height: 20px;
-      padding: 15px 10px
-    }
+		.share-dark {
+			height: 15px;
+			background-color: hsl(214, 17%, 51%);
+			padding: 10px;
+			border-radius: 50%;
+			position: relative;
+		}
 
-    .share-items-text {
-      white-space: pre;
-    }
+		.share-dark svg path {
+			fill: hsl(210, 46%, 95%);
+		}
 
-    .arrow-down-hidden {
-      display: none;
-    }
+		.share-popup-hidden {
+			display: none;
+		}
 
-    .arrow-down {
-      display: block;
-      position: absolute;
-      bottom: 40px;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid hsl(217, 19%, 35%);
-    }
-  </style>
+		.share-popup {
+			color: hsl(212, 23%, 69%);
+			border-radius: 10px;
+			position: absolute;
+			bottom: 50px;
+			left: -100px;
+			display: flex;
+			padding: 0px 30px;
+			background-color: hsl(217, 19%, 35%);
+		}
+
+		.share-items {
+			height: 20px;
+			padding: 15px 10px
+		}
+
+		.share-items-text {
+			white-space: pre;
+		}
+
+		.arrow-down-hidden {
+			display: none;
+		}
+
+		.arrow-down {
+			display: block;
+			position: absolute;
+			bottom: 40px;
+			width: 0;
+			height: 0;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid hsl(217, 19%, 35%);
+		}
+
+		/* Smartphones (portrait) ---------- */
+		@media screen and (max-width: 899px) {
+
+			/* styles */
+
+			.img img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 15px 15px 0px 0px;
+			}
+
+			.img {
+				height: 40%;
+				border-radius: 15px 15px 0px 0px;
+			}
+
+			.detail {
+				flex-grow: 1;
+				line-height: 25px;
+				justify-content: space-between;
+				padding: 0px;
+			}
+
+			.detail-text {
+				padding: 40px;
+			}
+
+			.detail-contact-dark {
+				height: 15%;
+				position: relative;
+				background-color: hsl(217, 19%, 35%);
+				border-radius: 0px 0px 15px 15px;
+			}
+
+			.contact {
+				margin: 15px 20px;
+			}
+
+			.share {
+				line-height: 10px;
+				position: unset;
+				margin: 15px 20px;
+			}
+
+			.container {
+				border-radius: 15px;
+				width: 90%;
+				height: 80%;
+				margin: 100px !important;
+			}
+
+			.article-preview {
+				width: 100%;
+				flex-direction: column;
+			}
+
+			.share-popup {
+				align-items: center;
+				line-height: normal;
+				top: 0px;
+				left: 0px;
+				bottom: 0;
+			}
+
+			.text-header {
+				font-size: 16px;
+			}
+
+			.arrow-down {
+				display: none;
+			}
+		}
+	</style>
 </head>
 
 <body>
-  <div class="article-preview">
-    <div class="img">
-      <img height="100%" src="./images/drawers.jpg" />
-    </div>
-    <div class="detail">
-      <div class="detail-text">
-        <div class="text-header">
-          Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home
-        </div>
-        <div class="text">
-          Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and
-          uninviting. I’ve got some simple tips to help you make any room feel complete.
-        </div>
-      </div>
-      <div class="detail-contact">
-        <div class="contact">
-          <img class="contact-img" height="50px" width="50px" src="./images/avatar-michelle.jpg" />
-          <div class="contact-name">
-            <span>
-              Michelle Appleton
-            </span>
-            <span class="contact-date">
-              28 Jun 2020
-            </span>
-          </div>
-        </div>
-        <div class="share" id="share-button" onclick="openSharePopup()">
+	<div class="container">
+		<div class="article-preview">
+			<div class="img">
+				<img height="100%" src="./images/drawers.jpg" />
+			</div>
+			<div class="detail">
+				<div class="detail-text">
+					<div class="text-header">
+						Shift the overall look and feel by adding these wonderful
+						touches to furniture in your home
+					</div>
+					<div class="text">
+						Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and
+						uninviting. I’ve got some simple tips to help you make any room feel complete.
+					</div>
+				</div>
+				<div id="detail-contact" class="detail-contact">
+					<div class="contact">
+						<img class="contact-img" height="50px" width="50px" src="./images/avatar-michelle.jpg" />
+						<div class="contact-name">
+							<span>
+								Michelle Appleton
+							</span>
+							<span class="contact-date">
+								28 Jun 2020
+							</span>
+						</div>
+					</div>
+					<div class="share" id="share-button" onclick="openSharePopup()">
 
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
-            <path fill="#6E8098"
-              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
-          </svg>
-          <div class="share-popup-hidden" id="sharePopup">
-            <span class="share-items share-items-text">S H A R E</span>
-            <span class="share-items">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <path fill="#FFF"
-                  d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z" />
-              </svg>
-            </span>
-            <span class="share-items">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17">
-                <path fill="#FFF"
-                  d="M20 2.172a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.605.996A4.096 4.096 0 0013.847.248c-2.65 0-4.596 2.472-3.998 5.037A11.648 11.648 0 011.392 1a4.109 4.109 0 001.27 5.478 4.086 4.086 0 01-1.858-.513c-.045 1.9 1.318 3.679 3.291 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.833 2.849A8.25 8.25 0 010 14.658a11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.663-12.205A8.354 8.354 0 0020 2.172z" />
-              </svg>
-            </span>
-            <span class="share-items">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                <path fill="#FFF"
-                  d="M10 0C4.478 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.522 0 10-4.477 10-10S15.522 0 10 0z" />
-              </svg>
-            </span>
-          </div>
-          <div id="arrow" class="arrow-down-hidden"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/rjstyles">Rajeev Singh</a>.
-  </div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+							<path fill="#6E8098"
+								d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+						</svg>
+						<div class="share-popup-hidden" id="sharePopup">
+							<span class="share-items share-items-text">S H A R E</span>
+							<span class="share-items">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+									<path fill="#FFF"
+										d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z" />
+								</svg>
+							</span>
+							<span class="share-items">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17">
+									<path fill="#FFF"
+										d="M20 2.172a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.605.996A4.096 4.096 0 0013.847.248c-2.65 0-4.596 2.472-3.998 5.037A11.648 11.648 0 011.392 1a4.109 4.109 0 001.27 5.478 4.086 4.086 0 01-1.858-.513c-.045 1.9 1.318 3.679 3.291 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.833 2.849A8.25 8.25 0 010 14.658a11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.663-12.205A8.354 8.354 0 0020 2.172z" />
+								</svg>
+							</span>
+							<span class="share-items">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+									<path fill="#FFF"
+										d="M10 0C4.478 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.522 0 10-4.477 10-10S15.522 0 10 0z" />
+								</svg>
+							</span>
+						</div>
+						<div id="arrow" class="arrow-down-hidden"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="https://github.com/rjstyles">Rajeev Singh</a>.
+	</div>
 </body>
 
 </html>
